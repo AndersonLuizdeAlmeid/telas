@@ -1,6 +1,6 @@
 package meujogo.Modelo;
 
-public class Tiro{
+public class Enemy1{
 
     private Image imagem;
     private int x, y; // posição do tiro
@@ -17,7 +17,7 @@ public class Tiro{
     }
     
     public void load (){
-        ImageIcon referencia = new ImageIcon("res\\tiro.png");
+        ImageIcon referencia = new ImageIcon("res\\inimigo.png");
         imagem = referencia.getImage();
 
         this.largura = imagem.getWidth(null);
@@ -25,10 +25,10 @@ public class Tiro{
     }
 
     public void update(){//velocidade tiro
-        this.x += VELOCIDADE;
-        if(this.x > LARGURA){
-            isVisivel = false;
-        }
+        this.x -= VELOCIDADE;
+       // if(this.x > LARGURA){
+       //     isVisivel = false;
+        //}
     }
 
     public Rectangle getBounds(){
